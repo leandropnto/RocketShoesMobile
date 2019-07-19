@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import api from '../../../services/api';
+import React from 'react';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
