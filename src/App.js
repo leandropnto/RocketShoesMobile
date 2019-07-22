@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StatusBar } from 'react-native';
+import './config/reactotronConfig';
 import Routes from './routes';
 import colors from './styles/colors';
-import ShoesContext from './context/ShoesContext';
+import store from './store';
+import { Provider } from 'react-redux';
 
 export default function App() {
-  const [cart, setCart] = useState({
-    cart: [10, 20, 30],
-    updateCart: item => setCart(cart),
-  });
-
   return (
     <>
-      <ShoesContext.Provider value={cart}>
+      <Provider store={store}>
         <StatusBar barStyle="light-content" backgroundColor={colors.dark} />
         <Routes />
-      </ShoesContext.Provider>
+      </Provider>
     </>
   );
 }
