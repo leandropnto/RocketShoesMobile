@@ -22,7 +22,6 @@ const Routes = createAppContainer(
           backgroundColor: colors.dark,
         },
         headerLeft: <LogoHeader />,
-        headerRight: <LogoButton />,
       },
       cardStyle: {
         backgroundColor: colors.dark,

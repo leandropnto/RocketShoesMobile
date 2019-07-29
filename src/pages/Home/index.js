@@ -5,6 +5,8 @@ import api from '../../services/api';
 import * as CartActions from '../../store/modules/cart/actions';
 import { bindActionCreators } from 'redux';
 
+import LogoButton from '../../components/LogoButton';
+
 import {
   Container,
   Product,
@@ -77,6 +79,17 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(CartActions, dispatch);
+
+Home.navigationOptions = ({ navigation }) => ({
+  headerRight: (
+    <LogoButton
+      onPress={() => {
+        console.tron.log('Navegando');
+        navigation.navigate('Cart');
+      }}
+    />
+  ),
+});
 
 export default connect(
   mapStateToProps,

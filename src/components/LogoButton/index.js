@@ -8,7 +8,7 @@ import { Container, LabelCart } from './styles';
 export function LogoButton(props) {
   const { cartLenght } = props;
   return (
-    <Container>
+    <Container {...props}>
       <Icon name="shopping-basket" color="#FFF" size={24} />
       <LabelCart>{cartLenght || 0}</LabelCart>
     </Container>
